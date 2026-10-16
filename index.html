@@ -48,6 +48,12 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--cF2F2F0);outline-of
 .mnote{font-family:'Roboto Mono',monospace;font-size:10px;line-height:1.4;color:var(--c96968F);margin-top:2px}
 .ml{font-family:'Roboto Mono',monospace;font-size:10px;color:var(--c96968F);margin-top:2px}
 .pr{color:var(--cE83E8C);font-weight:700;margin-right:8px}
+.ch{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:7px 0 3px;border-top:1px solid var(--c2A2A2B);border-bottom:1px solid var(--c2A2A2B)}
+.ch b{font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;color:var(--cF2F2F0);letter-spacing:-.01em}
+.ch span{font-family:'Roboto Mono',monospace;font-size:10px;color:var(--c96968F);text-align:right}
+.cs{display:grid;grid-template-columns:18px minmax(0,1fr);column-gap:8px;padding:3px 0;font-family:'Archivo',sans-serif;font-size:13px;line-height:1.32;color:var(--cD0D0CC)}
+.cn{font-family:'Roboto Mono',monospace;font-weight:700;font-size:10px;color:#111112;background:var(--c2FB8C6);text-align:center;height:14px;line-height:14px;margin-top:2px}
+.cf{font-family:'Roboto Mono',monospace;font-size:10px;line-height:1.45;color:var(--c96968F);padding:2px 0 6px 26px}
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px}
 .two>.li:nth-child(-n+2){border-top:0}
 
@@ -151,15 +157,17 @@ html,body{margin:0;background:var(--c0E0E0F)}
 </section>
 <section class="sec">
 <div class="sh"><span class="sn" style="background: var(--c2FB8C6); color: #111112">02</span><h2 class="st">swapping firmware</h2><span class="sc">vrs_02</span></div>
-<div class="r"><div class="kc"><span class="v">noise engineering</span></div><div class="a">all 11 run on any versio, free · about a minute</div></div>
-<div class="r"><div class="kc"><span class="v">the tool</span></div><div class="a"><a href="https://noiseengineering.us/portal/firmware/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px">noise engineering firmware swap</a> · also built into <a href="https://noiseengineering.us/pages/world-of-versio/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px">world of versio</a></div></div>
-<div class="r"><div class="kc"><span class="v">browser</span></div><div class="a">chromium-based (webusb): chrome, edge, opera · not firefox or safari</div></div>
-<div class="r"><div class="kc"><span class="v">cable</span></div><div class="a">micro usb <b>data</b> cable to the back of the module (charge-only fails)</div></div>
-<div class="r"><div class="kc"><span class="v">steps</span></div><div class="a">case off · unscrew · unplug the ribbon · usb in · follow the app · windows may need a one-time zadig driver</div></div>
-<div class="r"><div class="kc"><span class="v">a custom .bin</span></div><div class="a">the same updater: select custom file · or the <a href="https://flash.daisy.audio/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px">daisy web programmer</a></div></div>
-<div class="r"><div class="kc"><span class="v">dfu mode</span></div><div class="a">hold the board’s boot button, tap reset (cithara: hold 1, tap 2)</div></div>
-<div class="r"><div class="kc"><span class="v">some builds</span></div><div class="a">need the daisy bootloader first (v6.4 via flash.daisy.audio)</div></div>
-<div class="r"><div class="kc"><span class="v">going back</span></div><div class="a">reload any noise engineering firmware from world of versio</div></div>
+<div class="r"><div class="kc"><span class="v">you need</span></div><div class="a">a micro usb <b>data</b> cable, and chrome, edge or opera on a computer or android device</div></div>
+<div class="cs"><span class="cn">1</span><div>turn off the power to your case and unscrew the versio</div></div>
+<div class="cs"><span class="cn">2</span><div>unplug the power cable from the back of the module</div></div>
+<div class="cs"><span class="cn">3</span><div>plug the micro usb cable into the module and your computer</div></div>
+<div class="cs"><span class="cn">4</span><div>open the <a href="https://noiseengineering.us/portal/firmware/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px">noise engineering firmware swap</a> page, choose versio and a firmware, follow its instructions (free, about a minute)</div></div>
+<div class="cs"><span class="cn">5</span><div>unplug usb, reconnect power, screw the module back in</div></div>
+<div class="cf">firefox and safari can’t talk to the module · charge-only cables won’t connect · windows may need a one-time zadig driver</div>
+<div class="ch"><b>community firmware</b><span>a .bin from the developer</span></div>
+<div class="r"><div class="kc"><span class="v">most</span></div><div class="a">same swap page: choose custom file · to go back, pick any noise engineering firmware</div></div>
+<div class="r"><div class="kc"><span class="v">some</span></div><div class="a">need the <a href="https://flash.daisy.audio/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px">daisy web programmer</a>, and the daisy bootloader (v6.4) installed first</div></div>
+<div class="r"><div class="kc"><span class="v">dfu mode</span></div><div class="a">hold the board’s boot button, tap reset, let go (cithara: hold 1, tap 2)</div></div>
 </section>
 <section class="sec">
 <div class="sh"><span class="sn" style="background: #E8C534; color: #111112">03</span><h2 class="st">acidclank</h2><span class="sc">vrs_03 · yota mori</span></div>
